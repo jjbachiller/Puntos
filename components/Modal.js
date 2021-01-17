@@ -10,7 +10,7 @@ export default () => {
     >
       <View style={styles.center}>
         <View style={styles.modalView}>
-          <Text>:)</Text>
+          <Text>Patito clavo un clavito</Text>
         </View>
       </View>
     </Modal>

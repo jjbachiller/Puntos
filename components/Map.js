@@ -10,7 +10,7 @@ export default () => {
 
 const styles = StyleSheet.create({
   map: {
-    height: Dimensions.get('window').height,
+    height: Dimensions.get('window').height - 150,
     width: Dimensions.get('window').width,
   },
 })

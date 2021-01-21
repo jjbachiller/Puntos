@@ -1,11 +1,11 @@
 import React from 'react'
 import { StyleSheet, Dimensions, Button, View } from 'react-native';
 
-export default ({ onPressLeft, textLeft }) => {
+export default ({ onPressLeft, textLeft, togglePointsFilter }) => {
   return (
     <View style={styles.panel}>
       <Button title={textLeft} onPress={onPressLeft}/>
-      <Button title="Mostrar/Ocultar" />
+      <Button title="Mostrar/Ocultar" onPress={togglePointsFilter} />
     </View>
   )
 }

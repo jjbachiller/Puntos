@@ -9,6 +9,9 @@ export default function App() {
   const [nombre, setNombre] = useState('')
   const [visibilityFilter, setVisibilityFilter] = useState('new_punto') // new_punto, all_puntos
   const [visibility, setVisibility] = useState(false)
+  const [pointsFilter, setPointsFilter] = useState(true)
+
+  const togglePointsFilter = () => setPointsFilter(!pointsFilter)
 
   const handleLongPress = ({ nativeEvent }) => {
     setPuntoTemp( nativeEvent.coordinate )
@@ -34,8 +37,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Map onLongPress={handleLongPress}/>
-      <Panel onPressLeft={handleLista} textLeft='Lista' />
+      <Map onLongPress={handleLongPress} puntos={puntos} pointsFilter={pointsFilter}/>
+      <Panel onPressLeft={handleLista} textLeft='Lista' togglePointsFilter={togglePointsFilter}/>
       <Modal visibility={visibility}>
         {visibilityFilter === 'new_punto'
           ?
